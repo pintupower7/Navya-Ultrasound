@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Ultrasound and Intervention Center | Ranchi</title>
+    <meta name="description" content="Navya Ultrasound and Intervention Center - Advanced diagnostic imaging and interventional procedures in Ranchi, Jharkhand.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --secondary: #3b82f6;
+            --accent: #60a5fa;
+            --light: #eff6ff;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(30, 64, 175, 0.08);
+            --shadow-hover: 0 8px 30px rgba(30, 64, 175, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(30, 64, 175, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--secondary);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #dbeafe;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-hover);
+            border: 4px solid white;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-hover);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: float 3s ease-in-out infinite;
+            border: 1px solid #dbeafe;
+        }
+
+        .floating-card.card-1 {
+            top: 10%;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .floating-card.card-2 {
+            bottom: 15%;
+            right: -10px;
+            animation-delay: 1.5s;
+        }
+
+        .floating-card i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .floating-card div {
+            font-size: 0.85rem;
+        }
+
+        .floating-card div strong {
+            display: block;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        /* Services */
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid #dbeafe;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary);
+            transition: all 0.3s;
+            border: 2px solid #dbeafe;
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            transform: rotateY(360deg);
+            border-color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us */
+        .features {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            min-width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .feature-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .feature-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border-top: 1px solid #dbeafe;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        .reviews-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid #dbeafe;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 2px solid #dbeafe;
+        }
+
+        .review-meta h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 0.2rem;
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-style: italic;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .review-service {
+            margin-top: 1rem;
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #dbeafe;
+        }
+
+        .review-quote {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            color: #dbeafe;
+            opacity: 0.5;
+            line-height: 1;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .contact .section-header h2,
+        .contact .section-header p {
+            color: white;
+        }
+
+        .contact .section-header h2::after {
+            background: #93c5fd;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: #93c5fd;
+            margin-top: 0.2rem;
+        }
+
+        .contact-item div strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-item div p, .contact-item div a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        .contact-item div a:hover {
+            color: #bfdbfe;
+        }
+
+        .contact-cta {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-white:hover {
+            background: #eff6ff;
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: #60a5fa;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-accent:hover {
+            background: #93c5fd;
+            color: var(--primary-dark);
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            height: 100%;
+            min-height: 350px;
+            border: 4px solid rgba(255,255,255,0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            min-height: 350px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: #93c5fd;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #93c5fd;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Emergency Bar */
+        .emergency-bar {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            text-align: center;
+            padding: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 -4px 15px rgba(30, 64, 175, 0.2);
+        }
+
+        .emergency-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: var(--shadow);
+                gap: 1.5rem;
+                border-top: 1px solid #dbeafe;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .floating-card {
+                display: none;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .emergency-bar {
+                font-size: 0.8rem;
+                flex-direction: column;
+                gap: 0.3rem;
+                padding: 0.5rem;
+            }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="logo-text">
+                    Navya Ultrasound
+                    <span>Intervention Center</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+917209908661" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+                    <i class="fas fa-phone"></i> Call Now
+                </a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <div class="hero-badges">
+                    <div class="badge"><i class="fas fa-certificate"></i> Certified Center</div>
+                    <div class="badge"><i class="fas fa-shield-alt"></i> Safe & Hygienic</div>
+                </div>
+                <h1>Advanced <span>Ultrasound</span> & Intervention Care</h1>
+                <p>State-of-the-art diagnostic imaging and interventional procedures with precision, care, and compassion in the heart of Ranchi.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+917209908661" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Book Appointment
+                    </a>
+                    <a href="#services" class="btn btn-outline">
+                        <i class="fas fa-list"></i> Our Services
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=500&fit=crop" alt="Medical Ultrasound Equipment">
+                <div class="floating-card card-1">
+                    <i class="fas fa-user-md"></i>
+                    <div>
+                        <strong>Expert Radiologists</strong>
+                        Experienced Team
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Quick Reports</strong>
+                        Same Day Results
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header fade-in">
+            <h2>Our Services</h2>
+            <p>Comprehensive diagnostic and interventional services using cutting-edge technology</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Pregnancy / OB Ultrasound</h3>
+                <p>Complete fetal monitoring, anomaly scans, growth scans, and doppler studies for expectant mothers with detailed reporting.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-kidney"></i>
+                </div>
+                <h3>Abdominal Ultrasound</h3>
+                <p>Detailed imaging of liver, gallbladder, kidneys, pancreas, spleen, and other abdominal organs for accurate diagnosis.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-venus"></i>
+                </div>
+                <h3>TVS / Pelvic Ultrasound</h3>
+                <p>Transvaginal and pelvic sonography for gynecological evaluation, follicular monitoring, and pelvic pathology assessment.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3>Musculoskeletal USG</h3>
+                <p>Specialized imaging for joints, tendons, ligaments, and soft tissue structures with dynamic assessment capabilities.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Echocardiography</h3>
+                <p>2D Echo and color doppler studies for comprehensive cardiac evaluation and heart function assessment.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <i class="fas fa-syringe"></i>
+                </div>
+                <h3>Intervention Procedures</h3>
+                <p>USG-guided FNAC, biopsy, fluid aspiration, catheter placement, and other minimally invasive diagnostic interventions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="section-header fade-in">
+            <h2>Patient Reviews</h2>
+            <p>Trusted by hundreds of patients across Ranchi. Here's what they say about us.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card fade-in">
+                <div class="review-quote"><i class="fas fa-quote-right"></i></div>
+                <div class="review-header">
+                    <div class="review-avatar">SP</div>
+                    <div class="review-meta">
+                        <h4>Sunita Prasad</h4>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">"Excellent experience at Navya Ultrasound. The staff is very cooperative and the doctor explained everything in detail. The reports were ready within 30 minutes. Highly recommended for pregnancy scans."</p>
+                <span class="review-service"><i class="fas fa-baby"></i> Pregnancy Ultrasound</span>
+            </div>
+
+            <div class="review-card fade-in">
+                <div class="review-quote"><i class="fas fa-quote-right"></i></div>
+                <div class="review-header">
+                    <div class="review-avatar">RK</div>
+                    <div class="review-meta">
+                        <h4>Ramesh Kumar</h4>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">"Very clean and hygienic center. I visited for an abdominal ultrasound and was impressed by the modern equipment and professional approach. The location near Jaslok Hospital is very convenient."</p>
+                <span class="review-service"><i class="fas fa-kidney"></i> Abdominal Ultrasound</span>
+            </div>
+
+            <div class="review-card fade-in">
+                <div class="review-quote"><i class="fas fa-quote-right"></i></div>
+                <div class="review-header">
+                    <div class="review-avatar">AS</div>
+                    <div class="review-meta">
+                        <h4>Anjali Sharma</h4>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">"Best ultrasound center in Pahartoli area. The doctor is very experienced and the scanning quality is superb. Prices are reasonable compared to other centers in Ranchi. Will definitely recommend to family."</p>
+                <span class="review-service"><i class="fas fa-venus"></i> TVS Scan</span>
+            </div>
+
+            <div class="review-card fade-in">
+                <div class="review-quote"><i class="fas fa-quote-right"></i></div>
+                <div class="review-header">
+                    <div class="review-avatar">DM</div>
+                    <div class="review-meta">
+                        <h4>Dr. Manish Dubey</h4>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">"As a referring physician, I trust Navya Ultrasound for all my patients. Their reports are detailed, accurate, and delivered promptly. The intervention procedures are performed with great precision."</p>
+                <span class="review-service"><i class="fas fa-user-md"></i> Referring Doctor</span>
+            </div>
+
+            <div class="review-card fade-in">
+                <div class="review-quote"><i class="fas fa-quote-right"></i></div>
+                <div class="review-header">
+                    <div class="review-avatar">PG</div>
+                    <div class="review-meta">
+                        <h4>Priya Gupta</h4>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">"Had my follicular monitoring done here. The staff made me feel comfortable and the doctor was very gentle. Easy to book appointments over phone. Parking space available near PC Singh Complex."</p>
+                <span class="review-service"><i class="fas fa-heartbeat"></i> Follicular Study</span>
+            </div>
+
+            <div class="review-card fade-in">
+                <div class="review-quote"><i class="fas fa-quote-right"></i></div>
+                <div class="review-header">
+                    <div class="review-avatar">SK</div>
+                    <div class="review-meta">
+                        <h4>Suresh Kachhap</h4>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">"My father needed an Echo test and we came here based on a friend's recommendation. Very satisfied with the service. The center is well maintained and follows all safety protocols. Thank you Navya team!"</p>
+                <span class="review-service"><i class="fas fa-heart"></i> Echocardiography</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about">
+        <div class="section-header fade-in">
+            <h2>Why Choose Navya?</h2>
+            <p>Trusted by hundreds of patients and referring doctors across Ranchi</p>
+        </div>
+        <div class="features">
+            <div class="feature-item fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Advanced Technology</h3>
+                    <p>Latest generation ultrasound machines with high-resolution imaging and doppler capabilities for accurate diagnosis.</p>
+                </div>
+            </div>
+            <div class="feature-item fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Expert Team</h3>
+                    <p>Highly qualified and experienced radiologists and sonographers committed to quality care and precise reporting.</p>
+                </div>
+            </div>
+            <div class="feature-item fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-file-medical-alt"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Digital Reports</h3>
+                    <p>Clear, detailed digital reports with images provided promptly for immediate consultation with your doctor.</p>
+                </div>
+            </div>
+            <div class="feature-item fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-hand-holding-medical"></i>
+                </div>
+                <div class="feature-content">
+                    <h3>Patient Comfort</h3>
+                    <p>Clean, comfortable environment with strict hygiene protocols and compassionate staff for a stress-free experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header fade-in">
+            <h2>Visit Us</h2>
+            <p>We are conveniently located in Pahartoli, Ranchi with easy access and parking</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <h3>Contact Information</h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Address</strong>
+                        <p>Ground Floor, PC Singh Complex, Itki Road, Opposite Bhawani Petrol Pump, Near Jaslok Hospital, Sarweshwari Nagar, Pahartoli, Bajra, Ranchi, Jharkhand 834005</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:+917209908661">+91 72099 08661</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Working Hours</strong>
+                        <p>Monday - Saturday: 8:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 2:00 PM (Emergency services available)</p>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <a href="tel:+917209908661" class="btn btn-white">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/917209908661" class="btn btn-accent" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-container fade-in">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.924416664715!2d85.35!3d23.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1c2c2c2c2c2%3A0x1234567890abcdef!2sPahartoli%2C%20Ranchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                Navya <span>Ultrasound</span>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:+917209908661">Emergency: 72099 08661</a>
+            </div>
+            <div class="footer-bottom">
+                <p> Navya Ultrasound and Intervention Center. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Ground Floor, PC Singh Complex, Itki Rd, Ranchi, Jharkhand 834005</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Bar -->
+    <div class="emergency-bar">
+        <span><i class="fas fa-phone-volume"></i> For Appointments & Emergencies:</span>
+        <a href="tel:+917209908661">+91 72099 08661</a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 20px rgba(30, 64, 175, 0.1)';
+            } else {
+                navbar.style.boxShadow = '0 4px 20px rgba(30, 64, 175, 0.08)';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
